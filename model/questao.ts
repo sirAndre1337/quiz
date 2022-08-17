@@ -5,7 +5,7 @@ export default class QuestaoModel {
     #enunciado: string;
     #respostas: RespostaModel[];
     #acertou: boolean;
-    
+
     constructor(id: number, enunciado: string, respostas: RespostaModel[], acertou = false) {
         this.#id = id;
         this.#enunciado = enunciado;
@@ -14,17 +14,17 @@ export default class QuestaoModel {
     }
 
     get id() {
-        return this.id;
+        return this.#id;
     }
 
     get enunciado() {
-        return this.enunciado;
+        return this.#enunciado;
     }
     get respostas() {
-        return this.respostas;
+        return this.#respostas;
     }
     get acertou() {
-        return this.acertou;
+        return this.#acertou;
     }
 
     get respondida() {
