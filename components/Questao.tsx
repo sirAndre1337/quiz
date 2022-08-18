@@ -1,5 +1,6 @@
 import QuestaoModel from "../model/questao";
 import styles from "../styles/Questao.module.css";
+import Enunciado from "./Enunciado";
 
 
 interface QuestaoProps {
@@ -11,7 +12,7 @@ export default function Questao(props : QuestaoProps){
 
     return (
         <div className={styles.questao}>
-            <h1>Questao</h1>
+            <Enunciado texto={questao.enunciado}/>
         </div>
     )
 }
