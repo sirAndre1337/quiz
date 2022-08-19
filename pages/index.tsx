@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Botao from '../components/Botao'
 import Questao from '../components/Questao'
+import Questionario from '../components/Questionario'
 import QuestaoModel from '../model/questao'
 import RespostaModel from '../model/resposta'
 
@@ -28,6 +29,14 @@ export default function Home() {
     }
   }
 
+  function questaoRespondida(){
+
+  }
+
+  function irParaProximoPasso() {
+
+  }
+
   return (
     <div style={{
       display: 'flex',
@@ -36,13 +45,12 @@ export default function Home() {
       alignItems: 'center',
       height: '100vh',
     }}>
-      <Questao
-        valor={questao}
-        respostaFornecida={respostaFornecida}
-        tempoEsgotado={tempoEsgotado}
-        tempoPraResposta={7}
+      <Questionario 
+      questao={questao}
+      ultima={false}
+      questaoRespondida={questaoRespondida}
+      irParaProximoPasso={irParaProximoPasso}
       />
-      <Botao texto='Proxima' href='/resultado'/>
     </div>
   )
 }
