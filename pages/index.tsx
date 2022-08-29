@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Questionario from '../components/Questionario'
 import QuestaoModel from '../model/questao'
 
-const BASE_URL = 'http://localhost:3000/api';
+const BASE_URL = 'https://quiz-sirandre1337.vercel.app/api';
 
 export default function Home() {
   const [idsDasQuestoes, setIdsDasQuestoes] = useState<number[]>([])
